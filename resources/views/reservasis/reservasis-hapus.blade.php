@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <title>Royzz Music Admin - Gear</title>
+    <title>Royzz Music Admin - Reservasi</title>
 </head>
 <body>
     <div class="fcontainer">
@@ -30,10 +30,10 @@
     <form class="halreservasi-entry">
         <div class="hreservasi-entry">
         <h2 style="margin-bottom: -100px;">Ingin Menghapus Data ?</h2>
-            <a href={{ url('/gear/destroy/' . $gear->id_gears ) }} class="btn" style="margin-top: -200px; text-decoration: none;">
+            <a href={{ url('/reservasi/destroy/' . $reservasi->id_reservasis ) }} class="btn" style="margin-top: -200px; text-decoration: none;">
               Yes
             </a>
-            <a href="/gear" class="btn" style="margin-top: -300px; text-decoration: none;">
+            <a href="/reservasi" class="btn" style="margin-top: -300px; text-decoration: none;">
               No
             </a>              
         </div> 

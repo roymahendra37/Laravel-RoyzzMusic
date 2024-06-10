@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gear;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class GearController extends Controller
@@ -75,6 +76,13 @@ class GearController extends Controller
         $gear = Gear::find($id_gears);
         $gear->delete();
         return redirect('/gear');
+    }
+
+    public function cetak()
+    {
+        $gears = Gear::all();
+        $pdf = Pdf::loadview('gears.gears-cetak', compact('gears'));
+        return $pdf->download('rekap-gear.pdf');
     }
 
 }
